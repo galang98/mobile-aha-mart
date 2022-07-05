@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_super_small">3dp</dimen>
+    <dimen name="margin_mid_small">4dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_small1">6dp</dimen>
+    <dimen name="margin_small2">8dp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="margin_medium_12">12dp</dimen>
+    <dimen name="margin_medium_plus">13dp</dimen>
+    <dimen name="margin_medium_plus_plus">14dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_normal_16">16dp</dimen>
+    <dimen name="margin_normal2">18dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="margin_biger">25dp</dimen>
+    <dimen name="margin_big2">30dp</dimen>
+    <dimen name="margin_extra_big">40dp</dimen>
+
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_medium_16sp">16sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_medium_small">14sp</dimen>
+    <dimen name="text_size_medium_small2">13sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_smalldown">11sp</dimen>
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_super_small">8sp</dimen>
+    <dimen name="statusbar_view_height">25dp</dimen>
+</resources>

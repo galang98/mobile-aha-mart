@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.fragments.LoginFragment">
+
+    <ImageView
+        android:id="@+id/art"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/art_verifikasi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:layout_marginHorizontal="@dimen/margin_big"
+        android:text="Masukan 6 digit kode OTP yang dikirim melalui whatsapp ke nomor yang anda masukan"
+        android:textColor="@color/grey"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/art" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:cursorVisible="true"
+        android:maxLength="6"
+        tools:text="123"
+        android:fontFamily="@font/poppins_medium"
+        android:inputType="number"
+        android:itemBackground="@color/white_grey"
+        android:padding="@dimen/margin_medium"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_normal"
+        app:cursorColor="@color/grey"
+        app:cursorWidth="2dp"
+        app:itemCount="6"
+        app:itemHeight="51dp"
+        app:itemRadius="4dp"
+        app:itemSpacing="@dimen/margin_normal_16"
+        app:itemWidth="40dp"
+        app:lineWidth="0dp"
+        app:lineColor="@color/white_grey"
+        app:viewType="rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        app:layout_constraintVertical_bias="0.63"/>
+
+
+    <TextView
+        android:id="@+id/phone_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginHorizontal="@dimen/margin_big"
+        android:text="+628512345678"
+        android:textColor="@color/alizarim"
+        android:textSize="@dimen/text_size_medium_16sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/ic_otp_edit"
+        android:drawablePadding="@dimen/margin_medium"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pin_view" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginHorizontal="@dimen/margin_big"
+        android:text="09:50"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_big"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_edit" />
+
+    <Button
+        android:id="@+id/buttonSendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_biger"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium_small"
+        android:letterSpacing="0"
+        android:textAllCaps="false"
+        android:paddingTop="6dp"
+        android:onClick="@{viewModel::onLoginButton}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

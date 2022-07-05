@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_category_mie"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/lbl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_image"
+        android:text="Aneka Mie"
+        android:textColor="@color/scorpio"
+        android:textSize="@dimen/text_size_super_small"
+        android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

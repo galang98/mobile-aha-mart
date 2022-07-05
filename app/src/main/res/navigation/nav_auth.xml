@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/introFragment">s
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.aha.mart.app.ui.auth.fragments.IntroFragment"
+        android:label=""
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/introToLogin"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.aha.mart.app.ui.auth.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/loginToOtp"
+            app:destination="@id/otpFragment"
+            app:launchSingleTop="false"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/loginToRegister"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.aha.mart.app.ui.auth.fragments.RegisterFragment"
+        android:label="Daftar"
+        tools:layout="@layout/fragment_register"/>
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.aha.mart.app.ui.auth.fragments.OtpFragment"
+        android:label="OTP"
+        tools:layout="@layout/fragment_otp">
+        <argument
+            android:name="phone"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+</navigation>
